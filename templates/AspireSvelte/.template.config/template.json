@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "AspireSvelte template contributors",
+  "classifications": [
+    "Aspire",
+    "Svelte",
+    "Web"
+  ],
+  "identity": "AspireSvelte.Project",
+  "name": ".NET Aspire + Svelte",
+  "shortName": "aspire-svelte",
+  "sourceName": "AspireSvelte",
+  "preferNameDirectory": true,
+  "primaryOutputs": [
+    {
+      "path": "AspireSvelte.sln"
+    }
+  ],
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "exclude": [
+            "**/node_modules/**",
+            "**/dist/**",
+            "**/.svelte-kit/**",
+            "**/bin/**",
+            "**/obj/**"
+          ]
+        }
+      ]
+    }
+  ]
+}

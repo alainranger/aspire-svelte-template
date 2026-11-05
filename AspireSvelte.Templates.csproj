@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <PackageId>AspireSvelte.Templates</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>AspireSvelte template contributors</Authors>
+    <Description>A reusable .NET Aspire, ASP.NET Core, and Svelte project template.</Description>
+    <RepositoryUrl>https://github.com/alainranger/aspire-svelte-template</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/alainranger/aspire-svelte-template</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>dotnet-new;templates;aspire;svelte</PackageTags>
+    <PackageType>Template</PackageType>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <NoDefaultExcludes>true</NoDefaultExcludes>
+    <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
+    <ContentTargetFolders>content</ContentTargetFolders>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="templates/**/*"
+             Exclude="templates/**/node_modules/**;templates/**/dist/**;templates/**/.svelte-kit/**;templates/**/bin/**;templates/**/obj/**"
+             Pack="true"
+             PackagePath="content/" />
+    <None Update="README.md" Pack="true" PackagePath="/" />
+  </ItemGroup>
+</Project>
