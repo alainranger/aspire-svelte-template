@@ -34,7 +34,7 @@ dotnet new uninstall ./templates/AspireSvelte
 
 ```sh
 dotnet pack AspireSvelte.Templates.csproj --output ./artifacts
-dotnet new install ./artifacts/AspireSvelte.Templates.1.0.0.nupkg
+dotnet new install ./artifacts/AspireSvelte.Templates.1.0.1.nupkg
 ```
 
 ## Publication sur GitHub Packages
@@ -42,11 +42,11 @@ dotnet new install ./artifacts/AspireSvelte.Templates.1.0.0.nupkg
 GitHub Actions compile et teste le template sur chaque push vers `main`. La publication vers GitHub Packages se fait uniquement à partir d’un tag versionné :
 
 ```sh
-git tag v1.0.0
-git push origin v1.0.0
+git tag v1.0.1
+git push origin v1.0.1
 ```
 
-Le tag `v1.0.0` publie `AspireSvelte.Templates` en version `1.0.0`. Utilisez un nouveau numéro SemVer pour chaque publication (par exemple `v1.0.1`). Le workflow utilise `GITHUB_TOKEN` ; aucun secret NuGet n’est à configurer.
+Le tag `v1.0.1` publie `AspireSvelte.Templates` en version `1.0.1`. Utilisez un nouveau numéro SemVer pour chaque publication (par exemple `v1.0.2`). Le workflow utilise `GITHUB_TOKEN` ; aucun secret NuGet n’est à configurer.
 
 Après la première publication, rendez le package public dans GitHub : ouvrez **Packages** sur le profil `alainranger`, sélectionnez `AspireSvelte.Templates`, puis **Package settings → Change visibility → Public**. La visibilité du package est distincte de celle du dépôt.
 
@@ -58,7 +58,7 @@ dotnet nuget add source "https://nuget.pkg.github.com/alainranger/index.json" \
   --username alainranger \
   --password "$GITHUB_PACKAGES_TOKEN" \
   --store-password-in-clear-text
-dotnet new install AspireSvelte.Templates::1.0.0 --nuget-source github
+dotnet new install AspireSvelte.Templates::1.0.1 --nuget-source github
 ```
 
 `GITHUB_PACKAGES_TOKEN` doit être un Personal Access Token (classic) avec la permission `read:packages`. GitHub Packages demande une authentification NuGet même pour télécharger un package public.

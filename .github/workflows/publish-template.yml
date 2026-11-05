@@ -48,8 +48,8 @@ jobs:
         run: |
           output="$RUNNER_TEMP/aspire-svelte-ci"
           dotnet new install ./templates/AspireSvelte
-          dotnet new aspire-svelte --name AspireSvelte.CI --output "$output" --no-update-check
-          dotnet build "$output/AspireSvelte.CI.sln" --configuration Release
+          dotnet new aspire-svelte --name AspireSvelteCI --output "$output" --no-update-check
+          dotnet build "$output/AspireSvelteCI.sln" --configuration Release
           cd "$output/frontend"
           npm ci
           npm run check
