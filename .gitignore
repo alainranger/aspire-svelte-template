@@ -6,3 +6,4 @@
 artifacts/
 *.nupkg
 .DS_Store
+test/
