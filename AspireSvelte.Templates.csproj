@@ -2,7 +2,7 @@
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
     <PackageId>AspireSvelte.Templates</PackageId>
-    <Version>1.0.1</Version>
+    <Version>1.1.0</Version>
     <Authors>AspireSvelte template contributors</Authors>
     <Description>A reusable .NET Aspire, ASP.NET Core, and Svelte project template.</Description>
     <RepositoryUrl>https://github.com/alainranger/aspire-svelte-template</RepositoryUrl>
@@ -20,10 +20,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="templates/**/*"
-             Exclude="templates/**/node_modules/**;templates/**/dist/**;templates/**/.svelte-kit/**;templates/**/bin/**;templates/**/obj/**"
-             Pack="true"
-             PackagePath="content/" />
+    <Content Include="templates/**/*" Exclude="templates/**/node_modules/**;templates/**/dist/**;templates/**/.svelte-kit/**;templates/**/bin/**;templates/**/obj/**" Pack="true" PackagePath="content/" />
     <None Update="README.md" Pack="true" PackagePath="/" />
   </ItemGroup>
 </Project>
