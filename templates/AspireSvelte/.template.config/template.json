@@ -1,6 +1,6 @@
 {
   "$schema": "http://json.schemastore.org/template",
-  "author": "AspireSvelte template contributors",
+  "author": "Alain Ranger",
   "classifications": [
     "Aspire",
     "Svelte",
@@ -9,6 +9,7 @@
   "identity": "AspireSvelte.Project",
   "name": ".NET Aspire + Svelte",
   "shortName": "aspire-svelte",
+  "defaultName": "AspnetSvelte",
   "sourceName": "AspireSvelte",
   "preferNameDirectory": true,
   "primaryOutputs": [
